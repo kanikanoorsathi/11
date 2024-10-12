@@ -10,6 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- fontawesome link -->
+    <script src="https://kit.fontawesome.com/8f0afd7f7c.js" crossorigin="anonymous"></script>
+
     <!-- css link here -->
     <link rel="stylesheet" href="./style/style.css">
 </head>
@@ -66,8 +69,7 @@
             <div class="navbar-end">
                 <span class="btn btn-ghost">
                     <a href="#">
-                        <img class="user" src="./new-img/Frame 4.png"
-                            alt="">
+                        <img class="user" src="./new-img/Frame 4.png" alt="">
                     </a>
                 </span>
             </div>
@@ -101,19 +103,37 @@
         <!-- Path Adoption ends here -->
 
         <!-- Adopt Your Best Friend starts here -->
-        <div>
-            <div class="hero bg-base-100">
-                <div class="hero-content text-center">
-                    <div class="max-w-lg">
-                        <h1 class="text-3xl font-bold">Adopt Your Best Friend</h1>
-                        <p class="py-6 text-xs font-medium">
-                            It is a long established fact that a reader will be distracted by the readable content of a
-                            page when looking at its layout. The point of using Lorem Ipsum is that it has a.
-                        </p>
+        <section>
+            <div>
+                <div class="hero bg-base-100">
+                    <div class="hero-content text-center">
+                        <div class="max-w-lg">
+                            <h1 class="text-3xl font-bold">Adopt Your Best Friend</h1>
+                            <p class="py-6 text-xs font-medium">
+                                It is a long established fact that a reader will be distracted by the readable content
+                                of a
+                                page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <!-- button categories starts here -->
+            <div class=" w-10/12 mx-auto py-7">
+                <div id="categories" class=" flex justify-around gap-4 ">
+                </div>
+            </div>
+            <!-- button categories ends here -->
+
+            <!-- pets-Cards starts here -->
+            <section class="w-10/12 mx-auto py-5">
+                <div class="parent mx-auto">
+                    <div id="pets-Cards" class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
+                    <div class="p-5">2</div>
+                </div>
+            </section>
+            <!-- pets-Cards ends here -->
+        </section>
         <!-- Adopt Your Best Friend ends here -->
     </main>
     <footer>
@@ -132,6 +152,15 @@
                     <a class="link link-hover">Phone: +31 85 964 47 25</a>
                     <a class="link link-hover">Email: info@yourdomain.com</a>
                     <a class="link link-hover">Openings hours: 9.00 AM - 5.00 PM</a>
+                    <!-- icone starts here -->
+                    <div class="flex gap-3 w-2/4 h-auto">
+                        <a href="#"><img src="./new-img/Group 2.png" alt=""></i></a>
+                        <a href="#"><img src="./new-img/x-2 1.png" alt=""></a>
+                        <a href="#"><img src="./new-img/Vector.png" alt=""></a>
+                        <a href="#"><img src="./new-img/Group 7.png" alt=""></a>
+                    </div>
+                    <!-- icone ends here -->
+
                 </nav>
                 <nav>
                     <h6 class="footer-title">Useful Links</h6>
@@ -143,13 +172,16 @@
                 </nav>
                 <nav>
                     <h6 class="footer-title">Drop a Message</h6>
-                    <input class="input input-bordered w-full max-w-xs bg-zinc-800" type="text" placeholder="Enter your email">
-                    <input type="text" placeholder="Subscribe"class="input input-bordered bg-emerald-800 w-full max-w-xs" />
+                    <input class="input input-bordered w-full max-w-xs bg-zinc-800" type="text"
+                        placeholder="Enter your email">
+                    <input type="text" placeholder="Subscribe"
+                        class="input input-bordered bg-emerald-800 w-full max-w-xs" />
                 </nav>
             </footer>
         </div>
         <!-- footer ends here -->
     </footer>
+    <script src="js/Peddy.js"></script>
 </body>
 
 </html>

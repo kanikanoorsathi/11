@@ -3,3 +3,11 @@
     height: auto;
     margin: 0 auto;
 }
+.parent{
+    display: grid;
+    grid-template-columns: 85% 18%;   
+}
+#pets-Cards{
+    border: 1px solid #d4d2d2;
+    border-radius: 5px;
+}
