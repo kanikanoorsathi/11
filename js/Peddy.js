@@ -11,9 +11,9 @@ const loadCategories = () => {
 //     "category_icon": "https://i.ibb.co.com/N7dM2K1/cat.png"
 // }
 
-const loadButton = (id) => {
+const loadButton =(id) => {
     // alert(id);
-    fetch(`https://openapi.programming-hero.com/api/peddy/category/${id}`)
+    fetch(`https://openapi.programming-hero.com/api/peddy/category/${(id)}`)
     .then((res) => res.json())
     .then((data) => displaypets(data.data))
     .catch((error) => console.log(error));
@@ -28,7 +28,7 @@ const displayCategories = (categories) => {
         // button.classList = 'btn';
         // button.innerText =item.category;
         buttonContainer.innerHTML =`
-        <button onclick="loadButton(${item.id})" class="btn">
+        <button onclick="loadButton('${item.category}')" class="btn">
         <img class="w-5 h-5 object-cover" src="${item.category_icon}" alt="">
         ${item.category}
         <button>
