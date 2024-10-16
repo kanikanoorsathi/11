@@ -7,9 +7,12 @@
     display: grid;
     grid-template-columns: 78% 20%;   
 }
-#pets-Cards{
+/* grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 */
+.Cards{
     border: 1px solid #d4d2d2;
     border-radius: 5px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
 }
 .allPets{
     border: 1px solid #d4d2d2;
@@ -17,9 +20,23 @@
     margin: 0 10px;
    
 }
+.active{
+    /* background-color: blue;
+    color: #d4d2d2; */
+    border: 1px solid rgba(50, 150, 50, 0.5);
+}
+
+@media screen and (max-width: 992px){
+    .Cards{
+        grid-template-columns: 50% 50%;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .parent{
+        display: block;
+    }
+    .Cards{
         display: block;
     }
     .allPets{

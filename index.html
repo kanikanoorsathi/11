@@ -90,7 +90,7 @@
                             It is a long established fact that a reader will be distracted by the readable content of a
                             page when looking at its layout. The point of using Lorem Ipsum is that it has a.
                         </p>
-                        <button class="btn btn-success"><a href="#">View More</a></button>
+                        <button class="btn btn-success"><a href="#main">View More</a></button>
                         <!-- Path Adoption img starts here -->
                         <div class="avatar">
                             <img src="./B10A6-Assess-Your-Asynchronous-JS-and-ES6-skills/images/pet.webp" alt="">
@@ -103,7 +103,7 @@
         <!-- Path Adoption ends here -->
 
         <!-- Adopt Your Best Friend starts here -->
-        <section>
+        <section id="main">
             <div>
                 <div class="hero bg-base-100">
                     <div class="hero-content text-center">
@@ -128,14 +128,37 @@
             <!-- pets-Cards starts here -->
             <section class="w-10/12 mx-auto py-5">
                 <div class="parent mx-auto">
-                    <div id="pets-Cards" class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
+                    <div id="pets-Cards" class=" Cards"></div>
                     <div class="p-5 allPets">2</div>
-                    
+
                 </div>
             </section>
             <!-- pets-Cards ends here -->
         </section>
         <!-- Adopt Your Best Friend ends here -->
+
+        <!-- Modal starts here -->
+        <div>
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn hidden" onclick="my_modal_5.showModal()">open modal</button>
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <!-- modal details starts here -->
+                    <div id="modal-details">
+
+                    </div>
+                    <!-- modal details ends here -->
+                    <div class="mt-4">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will cancel the modal -->
+                            <button class="btn text-green-700 w-full border-green-700 outline-none">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </div>
+        <!-- Modal ends here -->
+
     </main>
     <footer>
         <!-- footer starts here -->
