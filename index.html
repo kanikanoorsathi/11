@@ -90,7 +90,7 @@
                             It is a long established fact that a reader will be distracted by the readable content of a
                             page when looking at its layout. The point of using Lorem Ipsum is that it has a.
                         </p>
-                        <button class="btn btn-success"><a href="#main">View More</a></button>
+                        <button class="btn btn-success text-white"><a href="#main">View More</a></button>
                         <!-- Path Adoption img starts here -->
                         <div class="avatar">
                             <img src="./B10A6-Assess-Your-Asynchronous-JS-and-ES6-skills/images/pet.webp" alt="">
@@ -125,6 +125,21 @@
             </div>
             <!-- button categories ends here -->
 
+            <!-- Sort by price starts here -->
+            <div class="w-10/12 mx-auto flex justify-between">
+                <samp>
+                    <h2>Best Deal For you</h2>
+                </samp>
+                <button class="btn btn-success text-white">Sort by Price</button>
+            </div>
+            <!-- Sort by price ends here -->
+
+            <!-- loader starts here-->
+            <div id="loader" class="grid justify-center">
+                <span class="loading loading-bars loading-lg hidden"></span>
+            </div>
+            <!-- loader ends here-->
+
             <!-- pets-Cards starts here -->
             <section class="w-10/12 mx-auto py-5">
                 <div class="parent mx-auto">
@@ -158,6 +173,23 @@
             </dialog>
         </div>
         <!-- Modal ends here -->
+
+        <!-- adopt Modal starts here -->
+
+        <dialog id="custommodaladoption" class="modal">
+            <div class="modal-box">
+                <img class="mx-auto w-28 animate-bounce"
+                    src="https://img.icons8.com/?size=80&id=TGGyAyBJKGRc&format=png" alt="" />
+                <div id="modal-content" class="text-center space-y-4">
+                    <h2 class="font-black text-2xl">Congrarualtion</h2>
+                    <p class="text-xs text-gray-500">
+                        Adoption process is start for your pet
+                    </p>
+                </div>
+                <h1 id="count" class="text-center font-bold text-3xl">3</h1>
+            </div>
+        </dialog>
+        <!-- adopt Modal ends here -->
 
     </main>
     <footer>

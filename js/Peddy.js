@@ -19,7 +19,7 @@ const removeActiveClass = () => {
     }
 }
 
-const loadButton =(id) => {
+const loadButton = (id) => {
     // alert(id);
     fetch(`https://openapi.programming-hero.com/api/peddy/category/${(id)}`)
     .then((res) => res.json())
@@ -35,7 +35,13 @@ const loadButton =(id) => {
         displaypets(data.data);
     })
     .catch((error) => console.log(error));
+
+    setTimeout (() =>{
+        loader.classList.add("hidden");
+        petsCards(data.data);
+    }, 2000)
 }
+
 // Creates displayCatagories
 const displayCategories = (categories) => {
     const categoriesContainer = document.getElementById("categories")
@@ -47,7 +53,7 @@ const displayCategories = (categories) => {
         // button.innerText =item.category;
         buttonContainer.innerHTML =`
         <button id="btn-${item.category}" onclick="loadButton('${item.category}')" class="btn category-btn">
-        <img class="w-5 h-5 object-cover" src="${item.category_icon}" alt="">
+        <img onclick = "" class="w-5 h-5 object-cover" src="${item.category_icon}" alt="">
         ${item.category}
         </button>
         `
@@ -170,7 +176,7 @@ pets. forEach ((pet) => {
       </div>
       <div class=" flex border rounded-md mt-2 p-3 cursor-pointer">
          <img class="border rounded p-1" src="./new-img/right.png" alt="">
-         <p class="text-sm border rounded p-1 mx-2 text-emerald-700">Adopt</p>
+         <p id="btndisable" onclick ="counting()" class="text-sm border rounded p-1 mx-2 text-emerald-700">Adopt</p>
          <p onclick="loadDetails('${pet.petId}')" class="text-sm border rounded p-1 text-emerald-700">Details</p>
       </div>
     </div>
@@ -178,5 +184,55 @@ pets. forEach ((pet) => {
     petsContainer.append(card);
 })
 }
+
+
+const counting = () => {
+    // Get the modal element
+    const adopt = document.getElementById("custommodaladoption");
+  
+    adopt.showModal();
+  
+    const count = document.getElementById("count");
+  
+    let counter = 3;
+    count.textContent = `${counter}`;
+  
+    const interval = setInterval(function () {
+      counter -= 1;
+  
+      if (counter > 0) {
+        count.textContent = `${counter}`;
+      } else {
+        clearInterval(interval);
+        adopt.close();
+      }
+    }, 1000);
+  };
+
+// const loadButton = async (category) => {
+//     try {
+
+//         const loader = document.getElementById('loader');
+//         loader.classList.remove("hidden");
+//         const response = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`);
+//         const data = await response.json();
+
+
+//         setTimeout(() => {
+//             loader.classList.add("hidden"); // 
+//             showAllPets(data.data);
+//         }, 2000);
+//     } catch (error) {
+//         console.error('Error:', error);
+
+//     }
+// };
+
+// setTimeout(() => {
+//     loader.classList.add("hidden");
+//     // parent.classList.remove("allPets");
+//     showAllPets(data.data);
+// }, 2000);
+
 petsCards()
 
