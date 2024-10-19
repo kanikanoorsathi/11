@@ -176,7 +176,7 @@ pets. forEach ((pet) => {
       </div>
       <div class=" flex border rounded-md mt-2 p-3 cursor-pointer">
          <img class="border rounded p-1" src="./new-img/right.png" alt="">
-         <p id="btndisable" onclick ="counting()" class="text-sm border rounded p-1 mx-2 text-emerald-700">Adopt</p>
+         <p id="disable" onclick ="counting()" class="text-sm border rounded p-1 mx-2 text-emerald-700">Adopt</p>
          <p onclick="loadDetails('${pet.petId}')" class="text-sm border rounded p-1 text-emerald-700">Details</p>
       </div>
     </div>
@@ -184,11 +184,9 @@ pets. forEach ((pet) => {
     petsContainer.append(card);
 })
 }
-
-
 const counting = () => {
     // Get the modal element
-    const adopt = document.getElementById("custommodaladoption");
+    const adopt = document.getElementById("adopted");
   
     adopt.showModal();
   
